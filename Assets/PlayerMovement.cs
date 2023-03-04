@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckRight; // The right leg
     public Transform groundCheckLeft; // The left leg
 
+    public SpriteRenderer spriteRenderer;
+
+    public Animator animator;
+
     public float jumpForce;
 
     public float moveSpeed;
@@ -28,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
 
         MovePlayer(horizontalMove);
+
+        Flip(rb.velocity.x);
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
     }
 
     private void MovePlayer(float horizontalMove){
@@ -37,6 +46,14 @@ public class PlayerMovement : MonoBehaviour
         if(isJumping){
             rb.AddForce(new Vector2(0f, jumpForce));
             isJumping = false;
+        }
+    }
+
+    private void Flip(float velocity){
+        if(velocity > 0.1f){
+            spriteRenderer.flipX = false;
+        }else if(velocity < -0.1f){
+            spriteRenderer.flipX = true;
         }
     }
 
