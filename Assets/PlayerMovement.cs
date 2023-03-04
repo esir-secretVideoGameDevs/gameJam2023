@@ -3,29 +3,32 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public bool isJumping;
-    public bool isGrounded;
+    public Rigidbody2D rb; // The player
 
-    public Transform groundCheckRight;
-    public Transform groundCheckLeft;
+    public BoxCollider2D ground; // The ground
+
+    private Vector3 velocity = Vector3.zero; // Velocity of the player
+
+    public Transform groundCheckRight; // The right leg
+    public Transform groundCheckLeft; // The left leg
 
     public float jumpForce;
 
     public float moveSpeed;
 
-    public Rigidbody2D rb;
-    private Vector3 velocity = Vector3.zero;
+    private bool isJumping;
+
+    private bool isGrounded;
 
     void FixedUpdate()
     {
 
-        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
+        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position).IsTouching(ground);
 
         float horizontalMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-        if(Input.GetButtonDown("Jump") && isGrounded){
+        if(Input.GetButtonDown("Jump") && isGrounded)
             isJumping = true;
-        }
 
         MovePlayer(horizontalMove);
     }
