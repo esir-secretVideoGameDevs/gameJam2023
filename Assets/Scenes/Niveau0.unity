@@ -2839,7 +2839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2452ed8fad66547a7a39b1d15b13e842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera_: {fileID: 0}
+  camera_: {fileID: 519420028}
 --- !u!61 &787123974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3063,7 +3063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2452ed8fad66547a7a39b1d15b13e842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera_: {fileID: 0}
+  camera_: {fileID: 519420028}
 --- !u!61 &955573680
 BoxCollider2D:
   m_ObjectHideFlags: 0
