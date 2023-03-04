@@ -669,6 +669,8 @@ MonoBehaviour:
   jumpForce: 300
   moveSpeed: 250
   isGrounded: 0
+  audioSource: {fileID: 735221944}
+  audioClip: {fileID: 8300000, guid: 7b02e3d02d9eca443bb17f4bef4f1f67, type: 3}
 --- !u!212 &735221940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -729,7 +731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735221937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55, y: 0.77, z: 0}
+  m_LocalPosition: {x: -2.6, y: 2.15, z: 0}
   m_LocalScale: {x: 0.2045, y: 0.2045, z: 0.2045}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -792,7 +794,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -7792713043722519801, guid: 3116cc418bc7f0947ae873b70e8bc5d0, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.187
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -954,7 +956,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5765305789653986410, guid: 3116cc418bc7f0947ae873b70e8bc5d0, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.461
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
