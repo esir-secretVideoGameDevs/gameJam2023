@@ -771,6 +771,8 @@ MonoBehaviour:
   jumpForce: 300
   moveSpeed: 250
   isGrounded: 0
+  audioSource: {fileID: 735221944}
+  audioClip: {fileID: 8300000, guid: 7b02e3d02d9eca443bb17f4bef4f1f67, type: 3}
 --- !u!212 &735221940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -946,7 +948,7 @@ GameObject:
   - component: {fileID: 1628052371}
   - component: {fileID: 1628052370}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: MusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,10 +980,10 @@ AudioSource:
   m_GameObject: {fileID: 1628052369}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5765305789653986410, guid: 3116cc418bc7f0947ae873b70e8bc5d0, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.461
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     public bool isGrounded;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     void FixedUpdate()
     {
 
@@ -43,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetVelocity = new Vector2(horizontalMove, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
+        if(!audioSource.isPlaying && horizontalMove!=0)audioSource.PlayOneShot(audioClip);
         if(isJumping){
             rb.AddForce(new Vector2(0f, jumpForce));
             isJumping = false;
