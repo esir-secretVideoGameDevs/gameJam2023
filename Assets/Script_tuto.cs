@@ -31,7 +31,7 @@ public class Script_tuto : MonoBehaviour
         GameObject [] panneaux = GameObject.FindGameObjectsWithTag("Panneau");
         foreach(GameObject panneau in panneaux){
             float dist = calculDist(panneau,player);
-            Debug.Log(panneau.name+" "+ dist);
+            //Debug.Log(panneau.name+" "+ dist);
         }
     }
 
