@@ -6,7 +6,6 @@ public class Script_tuto : MonoBehaviour
 {
     public GameObject textObject;
 
-    // Start is called before the first frame update
     void Start()
     {
         textObject.SetActive(false);
@@ -25,7 +24,7 @@ public class Script_tuto : MonoBehaviour
         textObject.SetActive(false);
 
     }
-    // Update is called once per frame
+    
     void Update()
     {
         
