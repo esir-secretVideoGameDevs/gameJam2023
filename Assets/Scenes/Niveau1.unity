@@ -696,7 +696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2c7297f8e55bf08db5f3dcd548c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Niveau2
+  sceneToLoad: Niveau2
+  numOfNextLevel: 2
+  isCurrentLevelBroken: 0
 --- !u!1 &635846790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,7 +3598,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2c7297f8e55bf08db5f3dcd548c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Niveau2
+  sceneToLoad: Niveau2
+  numOfNextLevel: 2
+  isCurrentLevelBroken: 1
 --- !u!61 &2063412481
 BoxCollider2D:
   m_ObjectHideFlags: 0

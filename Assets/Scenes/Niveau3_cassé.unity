@@ -14022,7 +14022,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2c7297f8e55bf08db5f3dcd548c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Niveau4
+  sceneToLoad: Niveau4
+  numOfNextLevel: 4
+  isCurrentLevelBroken: 0
 --- !u!1 &1699815034
 GameObject:
   m_ObjectHideFlags: 0
@@ -14280,7 +14282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2c7297f8e55bf08db5f3dcd548c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Niveau4
+  sceneToLoad: 
+  numOfNextLevel: 0
+  isCurrentLevelBroken: 0
 --- !u!1 &1757001799
 GameObject:
   m_ObjectHideFlags: 0

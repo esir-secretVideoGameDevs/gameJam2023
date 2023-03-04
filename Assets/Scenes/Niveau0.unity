@@ -2798,7 +2798,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2c7297f8e55bf08db5f3dcd548c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Niveau1
+  sceneToLoad: Niveau1
+  numOfNextLevel: 1
+  isCurrentLevelBroken: 0
 --- !u!1 &1157203570
 GameObject:
   m_ObjectHideFlags: 0
