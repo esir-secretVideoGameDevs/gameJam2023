@@ -24,15 +24,17 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
 
+
     void FixedUpdate()
     {
 
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
+        if(Input.GetButton("Jump") && isGrounded){
+            isJumping = true;
+        }
         float horizontalMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
-            isJumping = true;
 
         MovePlayer(horizontalMove);
 
