@@ -5,8 +5,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb; // The player
 
-    public BoxCollider2D ground; // The ground
-
     private Vector3 velocity = Vector3.zero; // Velocity of the player
 
     public Transform groundCheckRight; // The right leg
@@ -18,16 +16,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping;
 
-    private bool isGrounded;
-
     void FixedUpdate()
     {
 
-        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position).IsTouching(ground);
-
         float horizontalMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump"))
             isJumping = true;
 
         MovePlayer(horizontalMove);
