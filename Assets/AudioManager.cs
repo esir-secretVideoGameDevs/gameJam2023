@@ -16,6 +16,8 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(!audiosource.isPlaying){
+            audiosource.clip = playlist[0];
+        }
     }
 }
