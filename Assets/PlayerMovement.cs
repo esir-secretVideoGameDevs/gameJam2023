@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
         }
         float horizontalMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-
         MovePlayer(horizontalMove);
 
         Flip(rb.velocity.x);

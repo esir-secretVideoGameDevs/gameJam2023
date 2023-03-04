@@ -29,4 +29,13 @@ public class EnemyPatrol : MonoBehaviour
             target = waypoints[destPoint];
         }   
     }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("Player")){
+            if(Inventory.instance.getSword()){
+                Destroy(gameObject);
+            }
+        }
+    }
+
 }
