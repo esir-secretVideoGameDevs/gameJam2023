@@ -15,13 +15,16 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
 
     private bool isJumping;
+    public bool isGrounded;
 
     void FixedUpdate()
     {
 
+        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
+
         float horizontalMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && isGrounded)
             isJumping = true;
 
         MovePlayer(horizontalMove);
