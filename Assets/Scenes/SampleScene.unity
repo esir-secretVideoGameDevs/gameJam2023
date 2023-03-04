@@ -1120,8 +1120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playlist:
-  - {fileID: 8300000, guid: c1f46a89d9efd0146a1ea90634de4523, type: 3}
-  - {fileID: 8300000, guid: 5da500811e331a84ab686aebee6fa30c, type: 3}
+  - {fileID: 8300000, guid: 47bf9a1daa0b8664e9fb18a9a775cae7, type: 3}
+  - {fileID: 8300000, guid: 37655afd33e3ba1449305e29599d6631, type: 3}
+  - {fileID: 8300000, guid: 17415fa62eda189439f9fc2a885784f3, type: 3}
   audiosource: {fileID: 1628052371}
 --- !u!82 &1628052371
 AudioSource:
@@ -1227,7 +1228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628052369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4310895, y: 3.8323438, z: -0.046073824}
+  m_LocalPosition: {x: -8.34, y: -4.05, z: -0.046073824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
