@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
 
-
     void FixedUpdate()
     {
 
@@ -33,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButton("Jump") && isGrounded){
             isJumping = true;
         }
+
         float horizontalMove = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
         MovePlayer(horizontalMove);
@@ -49,7 +49,9 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
         if(!audioSource.isPlaying && horizontalMove!=0)audioSource.PlayOneShot(audioClip);
+
         if(horizontalMove==0 && audioSource.isPlaying)audioSource.Stop();
+        
         if(isJumping){
             rb.AddForce(new Vector2(0f, jumpForce));
             isJumping = false;
