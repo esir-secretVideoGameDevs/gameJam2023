@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: a5e502f3aafffed4dbce24f77d2a9f96
   - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: 941adb68a80bcd444b5a725f76cc4e50
+  - enabled: 1
     path: "Assets/Scenes/Niveau2_cass\xE9.unity"
     guid: a14e15955facb854d9fccc7f425eb115
   - enabled: 1
