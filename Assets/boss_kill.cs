@@ -21,7 +21,6 @@ public class boss_kill : MonoBehaviour
     }
   
     void OnMouseDown() {
-        Debug.Log("la touche et touché");
         SceneManager.LoadScene("Credit");
     }
 }

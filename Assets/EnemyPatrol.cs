@@ -37,6 +37,9 @@ public class EnemyPatrol : MonoBehaviour
                 if(SceneManager.GetActiveScene().name == "Niveau0"){
                     collision.gameObject.transform.position = new Vector3(-9.17f,3.62f,-10f);
                 }
+                else if(SceneManager.GetActiveScene().name=="Niveau2"){
+                    collision.gameObject.transform.position = new Vector3(-6f,3f,-10f);
+                }
             }
         }
     }

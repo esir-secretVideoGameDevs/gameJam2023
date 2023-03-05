@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -1.594, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141, y: -18}
+  m_AnchoredPosition: {x: 391, y: -19}
   m_SizeDelta: {x: 230.9907, y: 91.4304}
   m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!114 &199354462
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Louis Gabriel CAPLIEZ - \nTeam leader UI Designer\n\nKilian CORNEC -\nLead
-    developer\n\nValere BILLAUD -\nCharacter Designer\n\nLeo FILOCHE - \nSound Designer\n\nLouis
+  m_text: "Louis Gabriel CAPLIEZ - \nTeam leader UI Designer\n\n\nKilian CORNEC\nLead
+    developer\n\n\nValere BILLAUD\nCharacter Designer\n\n\nLeo FILOCHE \nSound Designer\n\n\nLouis
     RUELLOU - \nLevel Designer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b3e8ccdf90b8284489212096d6680e9, type: 2}
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -38.70965, w: -46.694046}
+  m_margin: {x: 0, y: 0, z: -38.70965, w: -181.52779}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -848,7 +848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198.52, y: -11}
+  m_AnchoredPosition: {x: -446.30322, y: -22.933899}
   m_SizeDelta: {x: 289.1332, y: 51.2343}
   m_Pivot: {x: 0.49999988, y: 0.5}
 --- !u!114 &1322961290
@@ -1094,7 +1094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -1.594, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 138}
+  m_AnchoredPosition: {x: 34, y: 229}
   m_SizeDelta: {x: 341.6126, y: 52.1015}
   m_Pivot: {x: 0.51631, y: 0.49999985}
 --- !u!114 &2086300661
