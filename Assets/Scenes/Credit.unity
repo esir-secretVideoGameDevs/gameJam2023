@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kittme
+  m_text: BRAVO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b3e8ccdf90b8284489212096d6680e9, type: 2}
   m_sharedMaterial: {fileID: 3239246310655963258, guid: 2b3e8ccdf90b8284489212096d6680e9, type: 2}
