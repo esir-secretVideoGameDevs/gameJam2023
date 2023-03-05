@@ -11,16 +11,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audiosource.clip = playlist[0];
+        audiosource.loop =true;
         audiosource.Play();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!audiosource.isPlaying)
-        {
-            audiosource.clip = playlist[0];
-        }
     }
 
     private Scene sceneCourante;
@@ -38,21 +30,16 @@ public class AudioManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
+        Debug.Log(scene.name);
         bool casse = scene.name.EndsWith("_cassé");
         bool casseCourante = (sceneCourante.name==null)?false:sceneCourante.name.EndsWith("_cassé");
-        if(casse!=casseCourante){
-         audiosource.Stop();   
+        if(casse!=casseCourante && casse){audiosource.clip=playlist[1];audiosource.Play();}
+        if(scene.name.Equals("Niveau4")){
+            audiosource.clip=playlist[2];
+            audiosource.Play();
         }
-        //Debug.Log(changementcontexte);
-        // bool  scasee =  cassee(scene);
-        // if (cassee(sceneCourante) !=scasee)
-        // {
-        //     // Il faut changer 
-        //     audiosource.Stop();
-        //     int indiceMusique = scasee?1:0;
-        //     audiosource.clip = playlist[indiceMusique];
-        // }
-        // sceneCourante =scene;
+        sceneCourante =scene;
     }
 
 }
