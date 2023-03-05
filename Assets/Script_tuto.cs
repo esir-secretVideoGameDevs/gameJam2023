@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class Script_tuto : MonoBehaviour
 {
-    public GameObject textObject;
+    public string message;
+    public Rect zone;
 
     void Start()
     {
-        textObject.SetActive(false);
+        message = "";
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
 
-        if(collision.CompareTag("Player")){
-            textObject.SetActive(true);
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision){
-
-        textObject.SetActive(false);
-
-    }
     
     void Update()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject [] panneaux = GameObject.FindGameObjectsWithTag("Panneau");
+        message="";
         foreach(GameObject panneau in panneaux){
             float dist = calculDist(panneau,player);
-            //Debug.Log(panneau.name+" "+ dist);
+            if(dist<1){
+                message = "Conseil";
+                switch(panneau.name) 
+                {
+                case "panneaux_0":
+                    message="Il faut sauter par dessus le trou \npour ne pas mourir (touche ESPACE)";
+                    break;
+                case "panneaux_1":
+                    message="Il faut récupérer l'épée pour tuer le slime. \nMarchez juste dessus.";
+                    break;
+                default:
+                    message="Il faut toucher le drapeau \npour finir le niveau.";
+                    break;
+                }
+                zone = new Rect(600,900,600,200);
+            }
         }
     }
 
@@ -46,5 +51,14 @@ public class Script_tuto : MonoBehaviour
         // Pythagorean theorem
         float finalDistance = Mathf.Sqrt(xDif * xDif + yDif * yDif);
         return finalDistance;
+    }
+
+    void OnGUI()
+    {
+        if(message.Length!=0) {
+            GUI.skin.label.fontSize = GUI.skin.box.fontSize = GUI.skin.button.fontSize = 30;
+            // Make a label that uses the "box" GUIStyle.
+            GUI.Label (zone, message, "button");
+        }
     }
 }
