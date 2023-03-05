@@ -5,7 +5,6 @@ using UnityEngine;
 public class Script_tuto : MonoBehaviour
 {
     public string message;
-    public Rect zone;
 
     void Start()
     {
@@ -35,7 +34,6 @@ public class Script_tuto : MonoBehaviour
                     message="Il faut toucher le drapeau \npour finir le niveau.";
                     break;
                 }
-                zone = new Rect(600,900,600,200);
             }
         }
     }
@@ -58,7 +56,10 @@ public class Script_tuto : MonoBehaviour
         if(message.Length!=0) {
             GUI.skin.label.fontSize = GUI.skin.box.fontSize = GUI.skin.button.fontSize = 30;
             // Make a label that uses the "box" GUIStyle.
-            GUI.Label (zone, message, "button");
+            int rectWidth = 600;
+            int rectHeight = 200;
+            float halfWidth = (Screen.width-rectWidth)/2;
+            GUI.Label (new Rect(halfWidth,0,rectWidth,rectHeight), message, "button");
         }
     }
 }
