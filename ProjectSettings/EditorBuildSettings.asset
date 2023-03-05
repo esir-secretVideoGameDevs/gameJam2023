@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveau1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Niveau2.unity
+    path: "Assets/Scenes/Niveau2_cass\xE9.unity"
     guid: a14e15955facb854d9fccc7f425eb115
   - enabled: 1
     path: Assets/Scenes/Niveau0.unity
@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveau3.unity
     guid: dd692704e0964dd4fa003ac93f79719e
+  - enabled: 1
+    path: "Assets/Scenes/Niveau1_cass\xE9.unity"
+    guid: 27cdb3371accd304cabeb9012a026bce
+  - enabled: 1
+    path: Assets/Scenes/Niveau2.unity
+    guid: 8047609977bc43c44941661adbf33efc
+  - enabled: 1
+    path: "Assets/Scenes/Niveau3_cass\xE9.unity"
+    guid: d41278455bf33d048af0f44cbaca18e8
+  - enabled: 1
+    path: Assets/Scenes/Niveau4.unity
+    guid: 0e39d7e9852bc3741bcb1c8dee1b3e8b
   m_configObjects: {}

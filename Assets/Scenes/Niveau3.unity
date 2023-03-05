@@ -26341,7 +26341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: Niveau4
   numOfNextLevel: 4
-  isCurrentLevelBroken: 0
+  isCurrentLevelBroken: 1
 --- !u!1 &2036493717
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,30 +8,36 @@ public class LoadSpecificScene : MonoBehaviour
     public bool isCurrentLevelBroken;
     private static bool[] hasBroken = {false, false, false}; // correspondant au niveau 1, 2 et 3
 
+    private static int numberOfLoop = 0;
+
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             Cursor.visible = false;
 
             // Check if the level is broken
             if (isCurrentLevelBroken) {
-                hasBroken[numOfNextLevel-1] = true;
+                hasBroken[numOfNextLevel-2] = true;
             }
 
             // load the correct level
-            if (numOfNextLevel==4) {
-                if (everythingIsBroken()) {
-                    Cursor.visible = true;
-                    SceneManager.LoadScene(sceneToLoad);
-                } else {
-                    string newSceneName = "Niveau1";
-                    SceneManager.LoadScene(newSceneName);
-                }
-            }
-            else if (!hasBroken[numOfNextLevel-1]) {
+            if (numOfNextLevel==4 && everythingIsBroken()) {
+                Cursor.visible = true;
                 SceneManager.LoadScene(sceneToLoad);
-            } else {
-                string newSceneName = sceneToLoad + "_cassé";
-                SceneManager.LoadScene(newSceneName);
+            } else  {
+                if(numOfNextLevel==4) {
+                    numOfNextLevel = 1;
+                    sceneToLoad = "Niveau1";
+                    numberOfLoop++;
+                    // Load a dialogue screen (cat & mother)
+                } else {
+                    // Load a dialogue screen (cat only)
+                    if (!hasBroken[numOfNextLevel-1]) {
+                        SceneManager.LoadScene(sceneToLoad);
+                    } else {
+                        string newSceneName = sceneToLoad + "_cassé";
+                        SceneManager.LoadScene(newSceneName);
+                    }
+                }
             }
         }
     }
