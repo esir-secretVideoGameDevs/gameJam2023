@@ -20,7 +20,7 @@ public class LoadSpecificScene : MonoBehaviour
             }
 
             // load the correct level
-            if (numOfNextLevel==4 && everythingIsBroken()) {
+            if (numOfNextLevel==4 && everythingIsBroken() && numberOfLoop>0) {
                 Cursor.visible = true;
                 SceneManager.LoadScene(sceneToLoad);
             } else  {
