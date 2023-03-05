@@ -38,7 +38,12 @@ public class AudioManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log(scene);
+        bool casse = scene.name.EndsWith("_cassé");
+        bool casseCourante = (sceneCourante.name==null)?false:sceneCourante.name.EndsWith("_cassé");
+        if(casse!=casseCourante){
+         audiosource.Stop();   
+        }
+        //Debug.Log(changementcontexte);
         // bool  scasee =  cassee(scene);
         // if (cassee(sceneCourante) !=scasee)
         // {
@@ -50,8 +55,4 @@ public class AudioManager : MonoBehaviour
         // sceneCourante =scene;
     }
 
-    private bool cassee(Scene s)
-    {
-        return s.name.EndsWith("_cassé");
-    }
 }
