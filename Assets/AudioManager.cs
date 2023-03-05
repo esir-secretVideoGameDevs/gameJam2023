@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
         if(!name.Contains("Niveau")){
             audiosource.Stop();
         }
-        else if(name.Equals("Niveau4")){
+        else if(name.Equals("Niveau4_cassé")){
             audiosource.clip=playlist[2];
             audiosource.Play();
         }
@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
             audiosource.clip=playlist[1];
             audiosource.Play();
         }
-        sceneCourante =scene;
+        sceneCourante = scene;
     }
 
     
