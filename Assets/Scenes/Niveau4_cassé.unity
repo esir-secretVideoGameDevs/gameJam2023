@@ -557,7 +557,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Ton clavier ne te servira \xE0 rien ici. Je pourrais presque aller chasser
-    une souris tellement je m'ennui avec toi."
+    une souris tellement je m'ennuie avec toi."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

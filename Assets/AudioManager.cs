@@ -30,10 +30,8 @@ public class AudioManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Debug.Log(scene.name);
-        // bool casse = scene.name.EndsWith("_cassé");
-        // bool casseCourante = (sceneCourante.name==null)?false:sceneCourante.name.EndsWith("_cassé");
-        // if(casse!=casseCourante && casse){audiosource.clip=playlist[1];audiosource.Play();}
+       //TODO: tentative de régler le problème des l'absence de musique lorsque l'on veut rejouer (génère erreur actuellement)
+       // if(audiosource==null)audiosource= new AudioSource();
         string name = scene.name;
         string courantename = (sceneCourante.name==null)?"":sceneCourante.name;
         if(!name.Contains("Niveau")){
@@ -47,8 +45,15 @@ public class AudioManager : MonoBehaviour
             audiosource.clip=playlist[1];
             audiosource.Play();
         }
+        else if(!audiosource.isPlaying && name.Equals("Niveau0")){
+            audiosource.clip = playlist[0];
+            audiosource.loop =true;
+            audiosource.Play();
+        }
         sceneCourante = scene;
     }
+
+    
 
     
 

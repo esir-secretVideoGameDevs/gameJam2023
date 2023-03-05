@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.191}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.71829224, y: 0.013305664}
+  m_AnchoredPosition: {x: 0.7182617, y: 0.013305664}
   m_SizeDelta: {x: 1.4641, y: 0.1523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36552255
@@ -983,7 +983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.08999634, y: 0}
+  m_AnchoredPosition: {x: -0.08996582, y: 0}
   m_SizeDelta: {x: 0.18005, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691646058
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BRAVO
+  m_text: KITTME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b3e8ccdf90b8284489212096d6680e9, type: 2}
   m_sharedMaterial: {fileID: 3239246310655963258, guid: 2b3e8ccdf90b8284489212096d6680e9, type: 2}
