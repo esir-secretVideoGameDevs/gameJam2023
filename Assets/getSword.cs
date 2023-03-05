@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class getSword : MonoBehaviour {
 
@@ -9,7 +10,8 @@ public class getSword : MonoBehaviour {
         if(collision.CompareTag("Player")){
             Destroy(gameObject);
             Inventory.instance.setSword(true);
-            flag.GetComponent<LoadSpecificScene>().isCurrentLevelBroken = false;
+            if(SceneManager.GetActiveScene().name != "Niveau0")
+                flag.GetComponent<LoadSpecificScene>().isCurrentLevelBroken = false;
         }
 
     }

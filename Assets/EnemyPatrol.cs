@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -34,6 +33,10 @@ public class EnemyPatrol : MonoBehaviour
         if(collision.CompareTag("Player")){
             if(Inventory.instance.getSword()){
                 Destroy(gameObject);
+            }else{
+                if(SceneManager.GetActiveScene().name == "Niveau0"){
+                    collision.gameObject.transform.position = new Vector3(-9.17f,3.62f,-10f);
+                }
             }
         }
     }

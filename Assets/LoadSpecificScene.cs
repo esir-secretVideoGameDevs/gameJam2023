@@ -14,6 +14,8 @@ public class LoadSpecificScene : MonoBehaviour
         if(collision.CompareTag("Player")){
             Cursor.visible = false;
 
+            Inventory.instance.setSword(false);
+
             // Check if the level is broken
             if (isCurrentLevelBroken) {
                 hasBroken[numOfNextLevel-2] = true;
