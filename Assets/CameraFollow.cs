@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public float timeOffSet;
     public Vector3 posOffSet;
     private Vector3 velocity;
-    private bool dispMessage = true;
+    // private bool dispMessage = true;
 
     public static string message = "Default : Hello World!\nAppuyez sur a pour fermer";
 
