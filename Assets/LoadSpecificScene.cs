@@ -29,7 +29,7 @@ public class LoadSpecificScene : MonoBehaviour
                     sceneToLoad = "Niveau1";
                     numberOfLoop++;
                     // Load a dialogue screen (cat & mother)
-                } else {
+                }// else {
                     // Load a dialogue screen (cat only)
                     if (!hasBroken[numOfNextLevel-1]) {
                         SceneManager.LoadScene(sceneToLoad);
@@ -37,7 +37,7 @@ public class LoadSpecificScene : MonoBehaviour
                         string newSceneName = sceneToLoad + "_cassé";
                         SceneManager.LoadScene(newSceneName);
                     }
-                }
+                //}
             }
         }
     }
