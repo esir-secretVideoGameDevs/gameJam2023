@@ -28,24 +28,21 @@ public class LoadSpecificScene : MonoBehaviour
             }
 
             // load the correct level
-            if (numOfNextLevel==4 && everythingIsBroken() && numberOfLoop>0) {
-                Cursor.visible = true;
-                SceneManager.LoadScene(sceneToLoad);
+            if (numOfNextLevel==4 ) {
+                numberOfLoop++;
+                if (everythingIsBroken() && numberOfLoop>1) {
+                    Cursor.visible = true;
+                    SceneManager.LoadScene(sceneToLoad+"_cassé");
+                } else {
+                    SceneManager.LoadScene(sceneToLoad);
+                }
             } else  {
-                if(numOfNextLevel==4) {
-                    numOfNextLevel = 1;
-                    sceneToLoad = "Niveau1";
-                    numberOfLoop++;
-                    // Load a dialogue screen (cat & mother)
-                }// else {
-                    // Load a dialogue screen (cat only)
-                    if (!hasBroken[numOfNextLevel-1]) {
-                        SceneManager.LoadScene(sceneToLoad);
-                    } else {
-                        string newSceneName = sceneToLoad + "_cassé";
-                        SceneManager.LoadScene(newSceneName);
-                    }
-                //}
+                if (!hasBroken[numOfNextLevel-1]) {
+                    SceneManager.LoadScene(sceneToLoad);
+                } else {
+                    string newSceneName = sceneToLoad + "_cassé";
+                    SceneManager.LoadScene(newSceneName);
+                }
             }
         }
     }
