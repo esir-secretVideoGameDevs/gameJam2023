@@ -10,6 +10,12 @@ public class LoadSpecificScene : MonoBehaviour
 
     private static int numberOfLoop = 0;
 
+    public static void resetGame() {
+        hasBroken[0] = false;
+        hasBroken[1] = false;
+        hasBroken[2] = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             Cursor.visible = false;
