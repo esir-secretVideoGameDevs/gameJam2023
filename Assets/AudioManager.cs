@@ -30,16 +30,26 @@ public class AudioManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
-        Debug.Log(scene.name);
-        bool casse = scene.name.EndsWith("_cassé");
-        bool casseCourante = (sceneCourante.name==null)?false:sceneCourante.name.EndsWith("_cassé");
-        if(casse!=casseCourante && casse){audiosource.clip=playlist[1];audiosource.Play();}
-        if(scene.name.Equals("Niveau4")){
+        // Debug.Log(scene.name);
+        // bool casse = scene.name.EndsWith("_cassé");
+        // bool casseCourante = (sceneCourante.name==null)?false:sceneCourante.name.EndsWith("_cassé");
+        // if(casse!=casseCourante && casse){audiosource.clip=playlist[1];audiosource.Play();}
+        string name = scene.name;
+        string courantename = (sceneCourante.name==null)?"":sceneCourante.name;
+        if(!name.Contains("Niveau")){
+            audiosource.Stop();
+        }
+        else if(name.Equals("Niveau4")){
             audiosource.clip=playlist[2];
+            audiosource.Play();
+        }
+        else if(!name.Equals(courantename) && (name.EndsWith("_cassé")!=courantename.EndsWith("_cassé")) && name.EndsWith("_cassé")){
+            audiosource.clip=playlist[1];
             audiosource.Play();
         }
         sceneCourante =scene;
     }
+
+    
 
 }
