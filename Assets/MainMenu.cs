@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     private string sceneName = "Niveau0";
 
     public void StartGame(){
+        LoadSpecificScene.resetGame();
         SceneManager.LoadScene(sceneName);
     }
 
